@@ -198,7 +198,7 @@ public class Add_Text_Activity extends AppCompatActivity implements ColorPickerD
         Uri cUri = Uri.fromFile(file);
         mediaScanIntent.setData(cUri);
         this.sendBroadcast(mediaScanIntent);
-        Toast.makeText(getApplicationContext(),"Image Saved to Pictures",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Imagen guardada en galería",Toast.LENGTH_SHORT).show();
 
         dv.invalidate();
     }
@@ -228,8 +228,8 @@ public class Add_Text_Activity extends AppCompatActivity implements ColorPickerD
         dialogBuilder.setView(dialogView);
         final EditText textContent = (EditText)dialogView.findViewById(R.id.add_text_on_image);
         dialogBuilder.setTitle("");
-        dialogBuilder.setMessage("Enter Text: ");
-        dialogBuilder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
+        dialogBuilder.setMessage("Introduce texto: ");
+        dialogBuilder.setPositiveButton("Hecho", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 userInputValue = textContent.getText().toString();
@@ -240,7 +240,7 @@ public class Add_Text_Activity extends AppCompatActivity implements ColorPickerD
                 }
             }
         });
-        dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        dialogBuilder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();

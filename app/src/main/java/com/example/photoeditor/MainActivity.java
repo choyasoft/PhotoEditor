@@ -28,7 +28,7 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-    //declaring necesary variables
+    //Declarar las variables necesarias
     public static final int MY_PERMISSION_REQUEST_CAMERA = 100,REQUEST_IMAGE_CAPTURE=1;
     public static final String ALLOW_KEY = "ALLOWED";
     public static final String CAMERA_PREF = "camera_pref";
@@ -80,16 +80,16 @@ public class MainActivity extends AppCompatActivity {
     private void showAlert(){
 
         AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this,R.style.Theme_AppCompat_Dialog_Alert).create();
-        alertDialog.setTitle("Alert");
-        alertDialog.setMessage("App needs to access the Camera!");
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "DON'T ALLOW", new DialogInterface.OnClickListener() {
+        alertDialog.setTitle("Alerta");
+        alertDialog.setMessage("La app necesita acceso a la cámara!");
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No permitir", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
                 dialogInterface.dismiss();
                 finish();
             }
         });
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "ALLOW", new DialogInterface.OnClickListener() {
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Permitir", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
@@ -104,15 +104,15 @@ public class MainActivity extends AppCompatActivity {
     private void showSettingsAlert(){
 
         final AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this,R.style.Theme_AppCompat_Dialog_Alert).create();
-        alertDialog.setTitle("Alert");
-        alertDialog.setMessage("App needs to access the Camera.");
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "DON'T ALLOW", new DialogInterface.OnClickListener() {
+        alertDialog.setTitle("Alerta");
+        alertDialog.setMessage("La app necesita acceso a la cámara.");
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No permitir", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
             }
         });
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "ALLOW", new DialogInterface.OnClickListener() {
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Permitir", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
             try{
                 photoFile = createImageFile();
             }catch (IOException e){
-                Log.d("","Couldn't create File");}
+                Log.d("","No se ha podido crear el archivo");}
 
             if(photoFile != null){
                 Uri photoURI = FileProvider.getUriForFile(this,"com.example.android.photo_editor_fileprovider",photoFile);
@@ -253,7 +253,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //function to open gallery to pick image
+    //Función que abre la galería para elegir imagen
     public void galleryIntent(){
 
         Intent i = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
@@ -261,7 +261,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //function to check if app has access to storage
+    //Función que comprueba si la app tiene acceso al almacenamiento
     public void checkPermG(){
 
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
@@ -293,16 +293,16 @@ public class MainActivity extends AppCompatActivity {
     private void showAlertG(){
 
         AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this,R.style.Theme_AppCompat_Dialog_Alert).create();
-        alertDialog.setTitle("Alert");
-        alertDialog.setMessage("App needs to access storage!");
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "DON'T ALLOW", new DialogInterface.OnClickListener() {
+        alertDialog.setTitle("Alerta");
+        alertDialog.setMessage("La app necesita acceso al almacenamiento!");
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No permitir", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
                 dialogInterface.dismiss();
                 finish();
             }
         });
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "ALLOW", new DialogInterface.OnClickListener() {
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Permitir", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
@@ -317,15 +317,15 @@ public class MainActivity extends AppCompatActivity {
     private void showSettingsAlertG(){
 
         final AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this,R.style.Theme_AppCompat_Dialog_Alert).create();
-        alertDialog.setTitle("Alert");
-        alertDialog.setMessage("App needs to access storage!.");
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "DON'T ALLOW", new DialogInterface.OnClickListener() {
+        alertDialog.setTitle("Alerta");
+        alertDialog.setMessage("La app necesita acceso al almacenamiento.");
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No permitir", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
             }
         });
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "ALLOW", new DialogInterface.OnClickListener() {
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Permitir", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
