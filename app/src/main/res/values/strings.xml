@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Photo Editor</string>
-    <string name="add_text">Add Text</string>
-    <string name="draw_over">Draw</string>
-    <string name="add_emoji">Add Emoji</string>
-    <string name="rotate_crop">Rotate/Crop</string>
-    <string name="transition_image">transition:IMAGE</string>
-    <string name="save_changes">Save Changes</string>
-    <string name="rotate_right">Rotate Right</string>
-    <string name="rotate_left">Rotate Left</string>
+    <string name="app_name">IvySoft PhotoEdit</string>
+    <string name="add_text">Añadir Texto</string>
+    <string name="draw_over">Dibujar</string>
+    <string name="add_emoji">Añadir Emoji</string>
+    <string name="rotate_crop">Rotar/Cortar</string>
+    <string name="transition_image">transicion:IMAGEN</string>
+    <string name="save_changes">Guardar cambios</string>
+    <string name="rotate_right">Rotar Derecha</string>
+    <string name="rotate_left">Rotar Izquierda</string>
 </resources>
