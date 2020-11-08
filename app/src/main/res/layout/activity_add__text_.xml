@@ -80,7 +80,7 @@
         android:id="@+id/saveOptionDraw"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@mipmap/ic_save_white_48dp"
+        android:src="@android:drawable/ic_menu_save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cancelOptionDraw" />
 
@@ -88,7 +88,7 @@
         android:id="@+id/cancelOptionDraw"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@mipmap/ic_cancel_white_48dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -96,7 +96,7 @@
         android:id="@+id/colorOptionDraw"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@mipmap/ic_color_lens_white_48dp"
+        android:src="@drawable/colorpick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/saveOptionDraw" />
 
