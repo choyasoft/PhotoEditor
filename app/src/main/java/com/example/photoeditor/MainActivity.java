@@ -133,12 +133,7 @@ public class MainActivity extends AppCompatActivity {
                         boolean showRationale = ActivityCompat.shouldShowRequestPermissionRationale(this,permission);
                         if(showRationale){showAlert();}
                         else if(!showRationale){
-                            // user denied flagging NEVER ASK AGAIN
-                            // you can either enable some fall back,
-                            // disable features of your app
-                            // or open another dialog explaining
-                            // again the permission and directing to
-                            // the app setting
+
                             saveToPreferences(MainActivity.this,ALLOW_KEY,true);
                         }
                     }
@@ -151,12 +146,7 @@ public class MainActivity extends AppCompatActivity {
                         boolean showRationale = ActivityCompat.shouldShowRequestPermissionRationale(this,permission);
                         if(showRationale){showAlert();}
                         else if(!showRationale){
-                            // user denied flagging NEVER ASK AGAIN
-                            // you can either enable some fall back,
-                            // disable features of your app
-                            // or open another dialog explaining
-                            // again the permission and directing to
-                            // the app setting
+
                             saveToPreferencesG(MainActivity.this,ALLOW_KEY,true);
                         }
                     }
@@ -169,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
     }
 
-    //function to open camera
+    //Función para abrir la cámara
     private void openCamera(){
         Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
 
@@ -193,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //function called on getting image either from camera or gallery. Gets file path and starts activity to diplay image
+    //Función llamada para solicitar una imagen desde camara o galería. Obtiene la ruta e inicia la actividad para mostrar la imagen
     @Override
     protected void onActivityResult(int requestCode,int ResultCode,Intent data){
 
@@ -224,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //function to create a file to store the image. It creates new file name with time stamp
+    //Función para crear un archivo para guardar la imagen. Crea un nuevo archivo con un TimeStamp
     private File createImageFile() throws IOException{
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "JPEG_"+timeStamp+"_";
@@ -235,16 +225,16 @@ public class MainActivity extends AppCompatActivity {
         return image;
     }
 
-    //check if app has permission to open camera. open if yes
+    //Comprueba si la app tiene permiso para usar la cámara, abrir en caso afirmativo.
     public void checkPermC(){
 
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED){
             if(getFromPref(this,ALLOW_KEY)){showSettingsAlert();}
             else if(ContextCompat.checkSelfPermission(this,Manifest.permission.CAMERA)!=PackageManager.PERMISSION_GRANTED){
-                //should we show an explanation?
+                //Debería dar una explicación?
                 if(ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.CAMERA)){showAlert();}
                 else {
-                    //no explanation needed, we can request the permission
+                    //No necesita explicación, podemos pedir permiso
                     ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CAMERA},MY_PERMISSION_REQUEST_CAMERA);
                 }
             }
