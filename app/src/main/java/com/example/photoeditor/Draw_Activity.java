@@ -114,7 +114,7 @@ public class Draw_Activity extends AppCompatActivity implements ColorPickerDialo
                 Image_Display_Activity.bm = textBit;
                 (Image_Display_Activity.imageDisplay).setImageBitmap(Image_Display_Activity.bm);
                 Image_Display_Activity.iHeight = textBit.getHeight();
-                Toast.makeText(getApplicationContext(),"Changes Applied",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Cambios aplicados",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -171,7 +171,7 @@ public class Draw_Activity extends AppCompatActivity implements ColorPickerDialo
         Uri cUri = Uri.fromFile(file);
         mediaScanIntent.setData(cUri);
         this.sendBroadcast(mediaScanIntent);
-        Toast.makeText(getApplicationContext(),"Image Saved to Pictures",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Imagen guardada en galería",Toast.LENGTH_SHORT).show();
 
         dv.invalidate();
     }

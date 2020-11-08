@@ -137,7 +137,7 @@ public class Add_Text_Activity extends AppCompatActivity implements ColorPickerD
                 Image_Display_Activity.bm = textBit;
                 (Image_Display_Activity.imageDisplay).setImageBitmap(Image_Display_Activity.bm);
                 Image_Display_Activity.iHeight = textBit.getHeight();
-                Toast.makeText(getApplicationContext(),"Changes Applied",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Cambios aplicados",Toast.LENGTH_SHORT).show();
             }
         });
 

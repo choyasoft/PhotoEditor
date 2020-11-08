@@ -211,7 +211,7 @@ public class Image_Display_Activity extends AppCompatActivity {
         Uri cUri = Uri.fromFile(file);
         mediaScanIntent.setData(cUri);
         this.sendBroadcast(mediaScanIntent);
-        Toast.makeText(getApplicationContext(),"Image Saved to Pictures",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Imagen guardada en galería",Toast.LENGTH_SHORT).show();
     }
 
     //rotate image if it is incorrectly oriented

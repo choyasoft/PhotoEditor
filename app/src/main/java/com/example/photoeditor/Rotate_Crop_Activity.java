@@ -52,7 +52,7 @@ public class Rotate_Crop_Activity extends AppCompatActivity {
                 (Image_Display_Activity.imageDisplay).setImageBitmap(Image_Display_Activity.bm);
                 Rect wh = cropImageView.getCropRect();
                 Image_Display_Activity.iHeight = wh.height();
-                Toast.makeText(getApplicationContext(),"Crop Applied",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Corte aplicado",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -152,7 +152,7 @@ public class Rotate_Crop_Activity extends AppCompatActivity {
         Uri cUri = Uri.fromFile(file);
         mediaScanIntent.setData(cUri);
         this.sendBroadcast(mediaScanIntent);
-        Toast.makeText(getApplicationContext(),"Image Saved to Pictures",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Imagen guardada en galería",Toast.LENGTH_SHORT).show();
 
     }
 }
