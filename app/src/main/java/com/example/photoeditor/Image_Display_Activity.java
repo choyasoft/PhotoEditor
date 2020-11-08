@@ -51,7 +51,7 @@ public class Image_Display_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
             View decorView = getWindow().getDecorView();
-            // Hide the status bar.
+            // Esconde la barra de estado.
             int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
             decorView.setSystemUiVisibility(uiOptions);
 
@@ -63,7 +63,7 @@ public class Image_Display_Activity extends AppCompatActivity {
         final float targetW = getIntent().getExtras().getInt("width");
         final float targetH = getIntent().getExtras().getInt("height");
 
-        // Get the dimensions of the bitmap
+        // Obtiene las dimensiones del bitmap
         bmOptions = new BitmapFactory.Options();
         bmOptions.inJustDecodeBounds = true;
         BitmapFactory.decodeFile(MainActivity.mCurrentPhotoPath, bmOptions);
@@ -78,10 +78,10 @@ public class Image_Display_Activity extends AppCompatActivity {
             }
         }
 
-        // Determine how much to scale down the image
+        // Determina cuanto debe escalarse/encogerse la imagen
         float scaleFactor = Math.min(photoW/vW,photoH/vH);
 
-        // Decode the image file into a Bitmap sized to fill the View
+        // Decodificar la imagen a bitmap para ajustarse al view
         bmOptions.inJustDecodeBounds = false;
         bmOptions.inSampleSize = (int)scaleFactor;
         bmOptions.inPurgeable = true;
@@ -89,7 +89,7 @@ public class Image_Display_Activity extends AppCompatActivity {
         bmOptions.inJustDecodeBounds = true;
         iHeight = bmOptions.outHeight;
 
-        //set scaled image to imageDisplay
+        //Setea la imagen escalada dentro del imageDisplay
         imageDisplay.setImageBitmap(bm);
 
         
@@ -112,7 +112,7 @@ public class Image_Display_Activity extends AppCompatActivity {
             Log.d(TAG,"Unable to change value of shift mode");
         }
 
-        //Start respective activities when option is chosen from bottom navigation view
+        //Iniciar las respectivas activities cuando la opción es elegida desde el menú de navegación de abajo.
         optionNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -186,7 +186,7 @@ public class Image_Display_Activity extends AppCompatActivity {
 
     }
 
-    //Function to save image
+    //Función para guardar la imagen
     private void saveImage()throws Exception{
         FileOutputStream fOut = null;
 
@@ -214,7 +214,7 @@ public class Image_Display_Activity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),"Imagen guardada en galería",Toast.LENGTH_SHORT).show();
     }
 
-    //rotate image if it is incorrectly oriented
+    //Rotar la imagen si está mal orientada
     private Bitmap rotImage(Bitmap bitmap){
         try {
             ExifInterface exif = new ExifInterface(MainActivity.mCurrentPhotoPath);
