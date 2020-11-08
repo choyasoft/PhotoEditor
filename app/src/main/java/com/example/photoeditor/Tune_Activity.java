@@ -138,7 +138,7 @@ public class Tune_Activity extends AppCompatActivity {
     private void saveBitmap(){
         Image_Display_Activity.bm = ((BitmapDrawable)tuneDisplay.getDrawable()).getBitmap();;
         (Image_Display_Activity.imageDisplay).setImageBitmap(Image_Display_Activity.bm);
-        Toast.makeText(getApplicationContext(),"Changes Applied",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Cambios aplicados",Toast.LENGTH_SHORT).show();
     }
     private void saveImage()throws Exception{
         saveBitmap();
@@ -165,7 +165,7 @@ public class Tune_Activity extends AppCompatActivity {
         Uri cUri = Uri.fromFile(file);
         mediaScanIntent.setData(cUri);
         this.sendBroadcast(mediaScanIntent);
-        Toast.makeText(getApplicationContext(),"Image Saved",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Imagen guardada",Toast.LENGTH_SHORT).show();
     }
 
 
