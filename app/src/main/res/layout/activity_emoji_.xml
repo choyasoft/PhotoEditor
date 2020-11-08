@@ -13,10 +13,9 @@
         android:id="@+id/view_drawing_pad"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#FFFFFF"
         android:orientation="vertical"
-        android:transitionName="@string/transition_image"
-        >
-    </RelativeLayout>
+        android:transitionName="@string/transition_image"></RelativeLayout>
     <ImageView
         android:id="@+id/emoji_btn"
         android:layout_width="40dp"
@@ -56,6 +55,7 @@
         android:backgroundTint="@color/white"
         android:textColor="@color/black"
         />
+
     <Button
         android:id="@+id/clearEmojiButton"
         android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
         android:layout_above="@+id/saveButton"
         android:layout_alignParentEnd="true"
         android:backgroundTint="@color/white"
-        android:text="Clear Emojis"
+        android:text="Limpiar Emojis"
         android:textColor="@color/black"
         android:textSize="8sp" />
 
@@ -82,10 +82,10 @@
         android:layout_height="wrap_content"
 
         android:layout_above="@+id/emojicon_edit_text"
-        android:layout_marginBottom="5dp"
         android:layout_marginRight="2dp"
+        android:layout_marginBottom="5dp"
         android:layout_toLeftOf="@+id/sizeBar"
-        android:text="Size"
+        android:text="Tamaño"
         android:textAlignment="center"
         android:textSize="10sp" />
     <ImageView
