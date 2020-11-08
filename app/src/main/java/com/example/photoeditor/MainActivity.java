@@ -49,14 +49,14 @@ public class MainActivity extends AppCompatActivity {
         addFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final String items[] = {"Capture Image from Camera","Choose Image from Gallery","Cancel"};
+                final String items[] = {"Tomar foto con la Cámara","Elegir imagen de la galería","Cancelar"};
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this,R.style.Theme_AppCompat_Dialog_Alert);
-                builder.setTitle("Add Photo!");
+                builder.setTitle("Añadir Foto!");
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        if(items[i].equals("Capture Image from Camera")){checkPermC();}
-                        else if(items[i].equals("Choose Image from Gallery")){galleryIntent();}
+                        if(items[i].equals("Tomar foto con la Cámara")){checkPermC();}
+                        else if(items[i].equals("Elegir imagen de la galería")){galleryIntent();}
                         else{dialogInterface.dismiss();}
                     }
                 });
