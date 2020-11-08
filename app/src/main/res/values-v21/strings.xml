@@ -5,4 +5,7 @@
     <string name="add_emoji">Añadir Emoji</string>
     <string name="rotate_crop">Rotar/Cortar</string>
     <string name="transition_image">transicion:IMAGEN</string>
+    <string name="txtWelcome">Iván Manuel Garcia</string>
+    <string name="txtWelcome2">Curso Android (2020)</string>
+    <string name="txtWelcome3">Pulsa el botón para empezar:</string>
 </resources>
