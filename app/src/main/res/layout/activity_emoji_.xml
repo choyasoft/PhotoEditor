@@ -24,8 +24,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:padding="4dp"
-        android:src="@mipmap/ic_insert_emoticon_white_48dp"
-        app:srcCompat="@drawable/emoji_1f603" />
+        android:src="@drawable/emoji_1f603" />
 
     <ImageView
         android:id="@+id/submit_btn"
@@ -94,7 +93,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:id="@+id/cancelIcon"
-        android:src="@mipmap/ic_cancel_white_48dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
         android:layout_alignParentLeft="true"
         android:layout_above="@+id/emojicon_edit_text"
         android:layout_marginLeft="8dp"
@@ -103,7 +102,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:id="@+id/saveIcon"
-        android:src="@mipmap/ic_save_white_48dp"
+        android:src="@android:drawable/ic_menu_save"
         android:layout_toRightOf="@+id/cancelIcon"
         android:layout_above="@+id/emojicon_edit_text"
         android:layout_marginLeft="8dp"
