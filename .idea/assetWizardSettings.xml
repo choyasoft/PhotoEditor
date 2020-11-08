@@ -79,7 +79,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\jafan\Desktop\isEditor.jpg" />
+                                                <entry key="imagePath" value="C:\Users\jafan\Desktop\logo_foreground.png" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -107,6 +107,11 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                    </map>
+                                  </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="foregroundLayerName" value="logo_round" />
                                     </map>
                                   </option>
                                 </PersistentState>
