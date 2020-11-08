@@ -16,23 +16,25 @@
         android:background="#FFFFFF"
         android:orientation="vertical"
         android:transitionName="@string/transition_image"></RelativeLayout>
+
     <ImageView
         android:id="@+id/emoji_btn"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
         android:padding="4dp"
-        android:src="@mipmap/ic_insert_emoticon_white_48dp" />
+        android:src="@mipmap/ic_insert_emoticon_white_48dp"
+        app:srcCompat="@drawable/emoji_1f603" />
 
     <ImageView
         android:id="@+id/submit_btn"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:padding="4dp"
-        android:src="@mipmap/ic_done_white_48dp" />
+        android:src="@android:drawable/ic_menu_send" />
 
     <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
         android:id="@+id/emojicon_edit_text"
