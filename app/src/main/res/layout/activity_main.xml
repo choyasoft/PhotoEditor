@@ -9,6 +9,9 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addFab"
+        app:fabSize="normal"
+        app:maxImageSize="105dp"
+        app:fabCustomSize="105dp"
         android:layout_width="157dp"
         android:layout_height="104dp"
         android:layout_marginStart="8dp"
@@ -17,7 +20,7 @@
         android:layout_marginBottom="8dp"
         android:elevation="10dp"
         android:src="@drawable/iseditor"
-        app:backgroundTint="@color/orange"
+        app:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
