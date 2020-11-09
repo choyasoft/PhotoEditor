@@ -26,20 +26,5 @@
       <option name="name" value="Google" />
       <option name="url" value="https://dl.google.com/dl/android/maven2/" />
     </remote-repository>
-    <remote-repository>
-      <option name="id" value="E:\Programas\AndroidSDK\extras\m2repository" />
-      <option name="name" value="E:\Programas\AndroidSDK\extras\m2repository" />
-      <option name="url" value="file:/$PROJECT_DIR$/../AndroidSDK/extras/m2repository" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="E:\Programas\AndroidSDK\extras\android\m2repository" />
-      <option name="name" value="E:\Programas\AndroidSDK\extras\android\m2repository" />
-      <option name="url" value="file:/$PROJECT_DIR$/../AndroidSDK/extras/android/m2repository" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="E:\Programas\AndroidSDK\extras\google\m2repository" />
-      <option name="name" value="E:\Programas\AndroidSDK\extras\google\m2repository" />
-      <option name="url" value="file:/$PROJECT_DIR$/../AndroidSDK/extras/google/m2repository" />
-    </remote-repository>
   </component>
 </project>
