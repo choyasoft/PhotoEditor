@@ -104,7 +104,7 @@ public class Image_Display_Activity extends AppCompatActivity {
             shiftingMode.setBoolean(menuView, false);
             shiftingMode.setAccessible(false);
             for (int i = 0; i < menuView.getChildCount(); i++) {
-               BottomNavigationItemView item = (BottomNavigationItemView) menuView.getChildAt(i);
+               // BottomNavigationItemView item = (BottomNavigationItemView) menuView.getChildAt(i);
                 menuView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
                 menuView.buildMenuView();
 
@@ -113,9 +113,9 @@ public class Image_Display_Activity extends AppCompatActivity {
                //  item.setChecked(item.getItemData().isChecked());
             }
         } catch (NoSuchFieldException e) {
-            Log.d(TAG, "Unable to get shift mode field");
+            Log.d(TAG, "Incapaz de obtener el campo de shift mode");
         } catch (IllegalAccessException e){
-            Log.d(TAG,"Unable to change value of shift mode");
+            Log.d(TAG,"Incapaz de cambiar el valor del shift mode");
         }
 
         //Iniciar las respectivas activities cuando la opción es elegida desde el menú de navegación de abajo.
