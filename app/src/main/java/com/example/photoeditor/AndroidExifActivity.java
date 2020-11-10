@@ -40,7 +40,7 @@ public class AndroidExifActivity extends Activity {
                                               @Override
                                               public void onClick(View view) {
                                                   Intent intent = new Intent(AndroidExifActivity.this, MapsActivity.class);
-                                                  intent.putExtra("lat", TAG_GPS_LATITUDE);
+                                                 intent.putExtra("lat", TAG_GPS_LATITUDE);
                                                   intent.putExtra("long", TAG_GPS_LONGITUDE);
                                                   startActivity(intent);
                                               }
@@ -76,8 +76,8 @@ public class AndroidExifActivity extends Activity {
             exif += "\nDatos de ubicación GPS:";
           //     exif += "\n TAG_GPS_DATESTAMP: " + exifInterface.getAttribute(ExifInterface.TAG_GPS_DATESTAMP);
           //     exif += "\n TAG_GPS_TIMESTAMP: " + exifInterface.getAttribute(ExifInterface.TAG_GPS_TIMESTAMP);
-            String Lat1 = exifInterface.getAttribute(TAG_GPS_LATITUDE);
             exif += "\n Latitud: " + exifInterface.getAttribute(TAG_GPS_LATITUDE);
+            String lat1 = exifInterface.getAttribute(TAG_GPS_LATITUDE);
           //     exif += "\n Latitud REF: " + exifInterface.getAttribute(ExifInterface.TAG_GPS_LATITUDE_REF);
             exif += "\n Longitud: " + exifInterface.getAttribute(ExifInterface.TAG_GPS_LONGITUDE);
           //     exif += "\n TAG_GPS_LONGITUDE_REF: " + exifInterface.getAttribute(ExifInterface.TAG_GPS_LONGITUDE_REF);

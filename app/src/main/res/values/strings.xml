@@ -10,4 +10,5 @@
     <string name="rotate_left">Rotar Izquierda</string>
     <string name="title_activity_maps">Mapa</string>
     <string name="google_maps_key">AIzaSyDoDDnVLhjCiz-_4GIx41bHSASzBkc-I7I</string>
+    <string name="title_activity_maps2">Map</string>
 </resources>

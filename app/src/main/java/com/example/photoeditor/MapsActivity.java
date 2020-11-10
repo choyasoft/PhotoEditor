@@ -34,9 +34,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-    }
 
-    /** Called when the map is ready. */
+
+    }
+    public void onMapReady(GoogleMap mMap) {
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            double lat1 = this.getIntent().getDoubleExtra("lat",0);
+            double long1 = this.getIntent().getDoubleExtra("long",0);
+            LatLng Latt = new LatLng(lat1, long1);
+            mMap.addMarker(new MarkerOptions().position(Latt)
+                    .title("Marcador"));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(Latt));
+
+        }
+/*
+   /* /** Called when the map is ready.
     @Override
     public void onMapReady(GoogleMap map) {
         mMap = map;
@@ -47,21 +60,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .title("Perth"));
         mPerth.setTag(0);
 
-    }
+    } */
 
 }
-/*
-    public void onMapReady(GoogleMap mMap) {
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            float lat1 = extras.getFloat("lat");
-            float long1 = extras.getFloat("long");
-            LatLng Latt = new LatLng(lat1, long1);
-            mMap.addMarker(new MarkerOptions().position(Latt)
-                    .title("Marcador"));
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(Latt));
 
-        }
-    } */
+
+    }
 
 

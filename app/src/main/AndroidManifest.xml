@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.photoeditor">
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -17,7 +18,7 @@
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AndroidExifActivity"></activity>
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -27,9 +28,10 @@
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBq04Pc7i3t0mLUBtFdgzwVvQhwPiF3ENk" />
 
+        <activity android:name=".AndroidExifActivity" />
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
@@ -69,7 +71,6 @@
             android:parentActivityName=".Image_Display_Activity"
             android:screenOrientation="portrait"
             android:theme="@style/ImageDisplayTheme" />
-
         <activity
             android:name=".Rotate_Crop_Activity"
             android:parentActivityName=".Image_Display_Activity"

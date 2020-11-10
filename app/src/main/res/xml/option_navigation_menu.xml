@@ -31,7 +31,5 @@
         android:icon="@mipmap/ic_tune_white_24dp"
         android:title="Tunear"
         app:showAsAction="ifRoom" />
-    
-
 
 </menu>
