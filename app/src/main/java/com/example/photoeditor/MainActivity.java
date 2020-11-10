@@ -325,11 +325,6 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
-    // BLOQUE DE INTEGRACION GPS
-
-
-
-
 
 
 }

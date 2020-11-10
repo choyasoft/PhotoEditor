@@ -29,7 +29,9 @@
         android:id="@+id/action_tune"
         android:enabled = "true"
         android:icon="@mipmap/ic_tune_white_24dp"
-        android:title="Tune"
-        app:showAsAction="ifRoom"
-        />
+        android:title="Tunear"
+        app:showAsAction="ifRoom" />
+    
+
+
 </menu>

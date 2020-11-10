@@ -1,6 +1,7 @@
 package com.example.photoeditor;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -161,6 +162,12 @@ public class Image_Display_Activity extends AppCompatActivity {
                         ActivityCompat.startActivity(Image_Display_Activity.this,tuneIntent,tuneOptions.toBundle());
                         break;
 
+                    case R.id.gps_locate:
+                        Intent gpsIntent = new Intent(Image_Display_Activity.this, AndroidExifActivity.class);
+                        // gpsIntent.putExtra("TAG_GPS_LATITUDE",targetLat)
+                        ActivityOptionsCompat gpsOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(Image_Display_Activity.this,new Pair<View, String>(findViewById(R.id.imageDisplay),(getString(R.string.transition_image))));
+                        ActivityCompat.startActivity(Image_Display_Activity.this,gpsIntent,gpsOptions.toBundle());
+                        break;
                 }
                 return true;
             }
