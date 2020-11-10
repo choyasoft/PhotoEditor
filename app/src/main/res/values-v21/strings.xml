@@ -2,7 +2,7 @@
     <string name="app_name">IvySoft PhotoEdit</string>
     <string name="add_text">Añadir Texto</string>
     <string name="draw_over">Dibujar</string>
-    <string name="add_emoji">Añadir Emoji</string>
+    <string name="geoloc">Geolocalizar</string>
     <string name="rotate_crop">Rotar/Cortar</string>
     <string name="gps_locate">Ubicación</string>
     <string name="transition_image">transicion:IMAGEN</string>

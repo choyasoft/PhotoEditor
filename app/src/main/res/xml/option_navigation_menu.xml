@@ -14,10 +14,10 @@
         android:title="@string/draw_over"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/action_addEmoji"
+        android:id="@+id/action_geoloc"
         android:enabled="true"
         android:icon="@mipmap/ic_insert_emoticon_white_24dp"
-        android:title="@string/add_emoji"
+        android:title="@string/geoloc"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_rotateCrop"
