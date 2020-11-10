@@ -50,13 +50,4 @@
         app:layout_constraintBottom_toTopOf="@+id/optionNavigation"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/gps_locate"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="60dp"
-        android:src="@android:drawable/btn_star"
-        app:layout_constraintBottom_toTopOf="@+id/optionNavigation"
-        app:layout_constraintStart_toStartOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -69,11 +69,7 @@
             android:parentActivityName=".Image_Display_Activity"
             android:screenOrientation="portrait"
             android:theme="@style/ImageDisplayTheme" />
-        <activity
-            android:name=".Emoji_Activity"
-            android:parentActivityName=".Image_Display_Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/ImageDisplayTheme" />
+
         <activity
             android:name=".Rotate_Crop_Activity"
             android:parentActivityName=".Image_Display_Activity"
