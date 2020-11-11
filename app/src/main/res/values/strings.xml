@@ -8,7 +8,6 @@
     <string name="save_changes">Guardar cambios</string>
     <string name="rotate_right">Rotar Derecha</string>
     <string name="rotate_left">Rotar Izquierda</string>
-    <string name="title_activity_maps">Mapa</string>
-    <string name="google_maps_key">AIzaSyDoDDnVLhjCiz-_4GIx41bHSASzBkc-I7I</string>
-    <string name="title_activity_maps2">Map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="google_maps_key">AIzaSyBq04Pc7i3t0mLUBtFdgzwVvQhwPiF3ENk</string>
 </resources>
