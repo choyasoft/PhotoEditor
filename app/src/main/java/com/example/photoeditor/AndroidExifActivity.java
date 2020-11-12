@@ -87,6 +87,7 @@ public class AndroidExifActivity extends Activity {
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+
             Toast.makeText(AndroidExifActivity.this,
                     e.toString(),
                     Toast.LENGTH_LONG).show();

@@ -32,9 +32,6 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".AndroidExifActivity" />
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
