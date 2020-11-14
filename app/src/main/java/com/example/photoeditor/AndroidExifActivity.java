@@ -62,24 +62,26 @@ public class AndroidExifActivity extends Activity {
         try {
             ExifInterface exifInterface = new ExifInterface(file);
 
-            exif += "\nDatos de ubicación GPS:";
 
-            exif += "\n Latitud: " + exifInterface.getAttribute(TAG_GPS_LATITUDE);
-            String lat1 = exifInterface.getAttribute(TAG_GPS_LATITUDE);
-              // exif += "\n Latitud REF: " + exifInterface.getAttribute(ExifInterface.TAG_GPS_LATITUDE_REF);
-            exif += "\n Longitud: " + exifInterface.getAttribute(ExifInterface.TAG_GPS_LONGITUDE);
-            String lon1 = exifInterface.getAttribute(TAG_GPS_LATITUDE);
-           //    exif += "\n TAG_GPS_LONGITUDE_REF: " + exifInterface.getAttribute(ExifInterface.TAG_GPS_LONGITUDE_REF);
+           // double latDouble = Double.parseDouble(latitude);
+           // double lonDouble = Double.parseDouble(longitude);
+
+            double latitude = 0;
+            exifInterface.getAttribute(ExifInterface.TAG_GPS_LATITUDE);
+            String latitudeConv = GPS.convert(latitude);
+            exifInterface.getAttribute(ExifInterface.TAG_GPS_LATITUDE_REF);
+            double longitude = 0;
+            exifInterface.getAttribute(ExifInterface.TAG_GPS_LONGITUDE);
+            String longitudeConv = GPS.convert(longitude);
+            //double longitude = 0;
+            //exifInterface.setAttribute(ExifInterface.TAG_GPS_LONGITUDE, GPS.convert(longitude));
+            //exifInterface.setAttribute(ExifInterface.TAG_GPS_LONGITUDE_REF, GPS.longitudeRef(longitude));
+            exifInterface.saveAttributes();
 
 
-           /*
-          double latDouble = Double.parseDouble(lat1);
-          double lonDouble = Double.parseDouble(lon1);
-          LatLng latlng = new LatLng(Double.parseDouble(lat1),Double.parseDouble(lon1));
-        */
-            Toast.makeText(this, lat1.replaceAll("[^,.\\dA-Za-z0-9]", " "), Toast.LENGTH_LONG).show();
+
             Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-                    Uri.parse("geo:0,0?q="+ lat1.replaceAll("[^,.\\dA-Za-z0-9]", " ")+lon1.replaceAll("[^,.\\dA-Za-z0-9]", " ")));
+                    Uri.parse("geo:0,0?q="+latitudeConv+", "+longitudeConv));
             intent.setPackage("com.google.android.apps.maps");
             startActivity(intent);
 
